@@ -4,19 +4,32 @@ import SwiftUI
 
 @MainActor
 public final class SymbolsListViewModel: ObservableObject {
+    @Published public private(set) var stocks: [StockQuote] = []
     @Published public private(set) var connectionStatus: ConnectionStatus = .disconnected
 
+    private let observeStocksUseCase: ObserveStocksUseCase
     private let observeConnectionStatusUseCase: ObserveConnectionStatusUseCase
+    private let startPriceFeedUseCase: StartPriceFeedUseCase
+    private let stopPriceFeedUseCase: StopPriceFeedUseCase
+
+    private var stockObservationTask: Task<Void, Never>?
     private var statusObservationTask: Task<Void, Never>?
 
     public init(
+        observeStocksUseCase: ObserveStocksUseCase,
         observeConnectionStatusUseCase: ObserveConnectionStatusUseCase,
+        startPriceFeedUseCase: StartPriceFeedUseCase,
+        stopPriceFeedUseCase: StopPriceFeedUseCase
     ) {
+        self.observeStocksUseCase = observeStocksUseCase
         self.observeConnectionStatusUseCase = observeConnectionStatusUseCase
+        self.startPriceFeedUseCase = startPriceFeedUseCase
+        self.stopPriceFeedUseCase = stopPriceFeedUseCase
         bind()
     }
 
     deinit {
+        stockObservationTask?.cancel()
         statusObservationTask?.cancel()
     }
 
@@ -27,15 +40,23 @@ public final class SymbolsListViewModel: ObservableObject {
     public func toggleConnection() {
         Task {
             if isConnected {
-                print("connected..")
+                await stopPriceFeedUseCase.execute()
             } else {
-                print("disconnected..")
+                await startPriceFeedUseCase.execute()
             }
         }
     }
 
     private func bind() {
+        let stocksStream = observeStocksUseCase.execute()
         let statusStream = observeConnectionStatusUseCase.execute()
+
+        stockObservationTask = Task { [weak self] in
+            for await quotes in stocksStream {
+                guard let self else { return }
+                self.stocks = quotes
+            }
+        }
 
         statusObservationTask = Task { [weak self] in
             for await status in statusStream {

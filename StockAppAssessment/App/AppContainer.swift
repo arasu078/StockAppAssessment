@@ -10,6 +10,8 @@ struct AppContainer {
     static func live() -> AppContainer {
         let repository = DefaultStockRepository(
             webSocketService: PostmanEchoWebSocketService(url: AppConstants.Networking.postmanEchoWebSocketURL),
+            priceGenerator: RandomStockPriceGenerator(),
+            seedQuotes: StockCatalog.defaultQuotes
         )
 
         return AppContainer(
@@ -19,7 +21,10 @@ struct AppContainer {
 
     func makeSymbolsListViewModel() -> SymbolsListViewModel {
         SymbolsListViewModel(
+            observeStocksUseCase: ObserveStocksUseCase(repository: stockRepository),
             observeConnectionStatusUseCase: ObserveConnectionStatusUseCase(repository: stockRepository),
+            startPriceFeedUseCase: StartPriceFeedUseCase(repository: stockRepository),
+            stopPriceFeedUseCase: StopPriceFeedUseCase(repository: stockRepository)
         )
     }
 }

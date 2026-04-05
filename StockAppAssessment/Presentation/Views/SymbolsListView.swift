@@ -14,6 +14,7 @@ struct SymbolsListView: View {
     private var contentList: some View {
         List {
             connectionSection
+            stocksSection
         }
     }
 
@@ -22,6 +23,14 @@ struct SymbolsListView: View {
             connectionHeader
         }
         .listRowInsets(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
+    }
+    
+    private var stocksSection: some View {
+        Section("stocks_title") {
+            ForEach(viewModel.stocks) { stock in
+                StockRowView(quote: stock)
+            }
+        }
     }
 
     private var connectionHeader: some View {

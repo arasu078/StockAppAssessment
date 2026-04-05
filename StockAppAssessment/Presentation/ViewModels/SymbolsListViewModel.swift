@@ -6,7 +6,12 @@ import SwiftUI
 public final class SymbolsListViewModel: ObservableObject {
     @Published public private(set) var stocks: [StockQuote] = []
     @Published public private(set) var connectionStatus: ConnectionStatus = .disconnected
-
+    @Published public var sortOption: StockSortOption = .price {
+        didSet {
+            sortStocks()
+        }
+    }
+    
     private let observeStocksUseCase: ObserveStocksUseCase
     private let observeConnectionStatusUseCase: ObserveConnectionStatusUseCase
     private let startPriceFeedUseCase: StartPriceFeedUseCase
@@ -55,6 +60,7 @@ public final class SymbolsListViewModel: ObservableObject {
             for await quotes in stocksStream {
                 guard let self else { return }
                 self.stocks = quotes
+                self.sortStocks()
             }
         }
 
@@ -63,6 +69,15 @@ public final class SymbolsListViewModel: ObservableObject {
                 guard let self else { return }
                 self.connectionStatus = status
             }
+        }
+    }
+    
+    private func sortStocks() {
+        switch sortOption {
+        case .price:
+            stocks.sort { $0.currentPrice > $1.currentPrice }
+        case .change:
+            stocks.sort { abs($0.priceChange) > abs($1.priceChange) }
         }
     }
 }

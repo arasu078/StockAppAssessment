@@ -8,6 +8,7 @@ struct SymbolsListView: View {
         NavigationStack {
             contentList
             .navigationTitle("stocks_title")
+            .toolbar(content: toolbarContent)
         }
     }
 
@@ -48,6 +49,26 @@ struct SymbolsListView: View {
                 viewModel.toggleConnection()
             }
             .buttonStyle(.borderedProminent)
+        }
+    }
+    
+    @ToolbarContentBuilder
+    private func toolbarContent() -> some ToolbarContent {
+        ToolbarItem(placement: .topBarTrailing) {
+            sortMenu
+        }
+    }
+
+    private var sortMenu: some View {
+        Menu {
+            Picker("sort_title", selection: $viewModel.sortOption) {
+                ForEach(StockSortOption.allCases) { option in
+                    Text(option.localizedTitleKey)
+                        .tag(option)
+                }
+            }
+        } label: {
+            Image(systemName: "arrow.up.arrow.down.circle")
         }
     }
 }

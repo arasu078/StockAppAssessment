@@ -134,7 +134,6 @@
       }
     },
     "sort_change" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -151,7 +150,6 @@
       }
     },
     "sort_price" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -168,7 +166,6 @@
       }
     },
     "sort_title" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

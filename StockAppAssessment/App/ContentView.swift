@@ -8,22 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let container: AppContainer
+    @StateObject private var viewModel: SymbolsListViewModel
+
+    init(container: AppContainer = .live()) {
+        self.container = container
+        _viewModel = StateObject(
+            wrappedValue: container.makeSymbolsListViewModel()
+        )
+    }
+
     var body: some View {
-        VStack(spacing: 12) {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-
-            Text("stocks_title")
-                .font(.title2.weight(.semibold))
-
-            Text("connection_connected")
-                .foregroundStyle(.secondary)
-
-            Text(String(localized: "stock_description_aapl"))
-                .multilineTextAlignment(.center)
-        }
-        .padding()
+        SymbolsListView(viewModel: viewModel, container: container)
     }
 }
 

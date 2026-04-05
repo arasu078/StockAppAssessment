@@ -12,6 +12,7 @@ public final class DefaultStockRepository: StockRepository {
     private var quotesBySymbol: [String: StockQuote]
     private var stockContinuations: [UUID: AsyncStream<[StockQuote]>.Continuation] = [:]
     private var statusContinuations: [UUID: AsyncStream<ConnectionStatus>.Continuation] = [:]
+    private var alertContinuations: [UUID: AsyncStream<StockFeedAlert>.Continuation] = [:]
     private var senderTask: Task<Void, Never>?
     private var receiverTask: Task<Void, Never>?
     private var connectionStatus: ConnectionStatus = .disconnected
@@ -53,7 +54,20 @@ public final class DefaultStockRepository: StockRepository {
             }
         }
     }
-    
+
+    public func observeAlerts() -> AsyncStream<StockFeedAlert> {
+        AsyncStream { continuation in
+            let id = UUID()
+            addAlertContinuation(continuation, id: id)
+
+            continuation.onTermination = { _ in
+                Task { @MainActor [weak self] in
+                    self?.removeAlertContinuation(id: id)
+                }
+            }
+        }
+    }
+
     public func startPriceFeed() async {
         guard senderTask == nil, receiverTask == nil else { return }
         
@@ -71,6 +85,7 @@ public final class DefaultStockRepository: StockRepository {
             }
         } catch {
             updateConnectionStatus(.disconnected)
+            broadcastAlert(.connectionLost)
         }
     }
     
@@ -106,7 +121,15 @@ extension DefaultStockRepository {
     private func removeStockContinuation(id: UUID) {
         stockContinuations.removeValue(forKey: id)
     }
-    
+
+    private func addAlertContinuation(_ continuation: AsyncStream<StockFeedAlert>.Continuation, id: UUID) {
+        alertContinuations[id] = continuation
+    }
+
+    private func removeAlertContinuation(id: UUID) {
+        alertContinuations.removeValue(forKey: id)
+    }
+
     private func produceUpdates() async {
         while !Task.isCancelled {
             do {
@@ -124,6 +147,7 @@ extension DefaultStockRepository {
                     return
                 }
 
+                broadcastAlert(.connectionLost)
                 await stopPriceFeed()
                 return
             }
@@ -140,6 +164,7 @@ extension DefaultStockRepository {
                 return
             }
 
+            broadcastAlert(.connectionLost)
             await stopPriceFeed()
         }
     }
@@ -175,7 +200,11 @@ extension DefaultStockRepository {
         let current = snapshot()
         stockContinuations.values.forEach { $0.yield(current) }
     }
-    
+
+    private func broadcastAlert(_ alert: StockFeedAlert) {
+        alertContinuations.values.forEach { $0.yield(alert) }
+    }
+
     private func snapshot() -> [StockQuote] {
         quotesBySymbol.values.sorted { $0.symbol < $1.symbol }
     }

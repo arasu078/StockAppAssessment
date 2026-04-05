@@ -23,6 +23,7 @@ struct AppContainer {
         SymbolsListViewModel(
             observeStocksUseCase: ObserveStocksUseCase(repository: stockRepository),
             observeConnectionStatusUseCase: ObserveConnectionStatusUseCase(repository: stockRepository),
+            observeAlertsUseCase: ObserveAlertsUseCase(repository: stockRepository),
             startPriceFeedUseCase: StartPriceFeedUseCase(repository: stockRepository),
             stopPriceFeedUseCase: StopPriceFeedUseCase(repository: stockRepository)
         )

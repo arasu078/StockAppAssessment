@@ -8,6 +8,7 @@ struct SymbolsListView: View {
         NavigationStack {
             contentList
             .navigationTitle("stocks_title")
+            .alert(item: $viewModel.activeAlert, content: makeAlert)
             .toolbar(content: toolbarContent)
         }
     }
@@ -51,7 +52,7 @@ struct SymbolsListView: View {
             .buttonStyle(.borderedProminent)
         }
     }
-    
+
     @ViewBuilder
     private func stockNavigationLink(for stock: StockQuote) -> some View {
         NavigationLink {
@@ -60,7 +61,15 @@ struct SymbolsListView: View {
             StockRowView(quote: stock)
         }
     }
-    
+
+    private func makeAlert(for alert: StockFeedAlert) -> Alert {
+        Alert(
+            title: Text(String(localized: alert.title)),
+            message: Text(String(localized: alert.message)),
+            dismissButton: .default(Text(String(localized: alert.buttonTitle)))
+        )
+    }
+
     @ToolbarContentBuilder
     private func toolbarContent() -> some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {

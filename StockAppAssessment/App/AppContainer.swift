@@ -27,4 +27,11 @@ struct AppContainer {
             stopPriceFeedUseCase: StopPriceFeedUseCase(repository: stockRepository)
         )
     }
+    
+    func makeSymbolDetailViewModel(symbol: String) -> SymbolDetailViewModel {
+        SymbolDetailViewModel(
+            symbol: symbol,
+            observeStocksUseCase: ObserveStocksUseCase(repository: stockRepository)
+        )
+    }
 }

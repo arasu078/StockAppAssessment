@@ -29,7 +29,7 @@ struct SymbolsListView: View {
     private var stocksSection: some View {
         Section("stocks_title") {
             ForEach(viewModel.stocks) { stock in
-                StockRowView(quote: stock)
+                stockNavigationLink(for: stock)
             }
         }
     }
@@ -49,6 +49,15 @@ struct SymbolsListView: View {
                 viewModel.toggleConnection()
             }
             .buttonStyle(.borderedProminent)
+        }
+    }
+    
+    @ViewBuilder
+    private func stockNavigationLink(for stock: StockQuote) -> some View {
+        NavigationLink {
+            SymbolDetailView(symbol: stock.symbol, container: container)
+        } label: {
+            StockRowView(quote: stock)
         }
     }
     

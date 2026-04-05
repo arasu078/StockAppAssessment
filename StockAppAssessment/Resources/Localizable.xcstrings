@@ -1,0 +1,608 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "action_start" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        }
+      }
+    },
+    "action_stop" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أوقف"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
+          }
+        }
+      }
+    },
+    "alert_connection_lost_button" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حسنًا"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "alert_connection_lost_message" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم قطع الاتصال. يرجى إعادة الاتصال مرة أخرى أو المحاولة بعد بعض الوقت."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connection disconnected. Please reconnect again or try after some time."
+          }
+        }
+      }
+    },
+    "alert_connection_lost_title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انقطع الاتصال"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connection Lost"
+          }
+        }
+      }
+    },
+    "connection_connected" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متصل"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connected"
+          }
+        }
+      }
+    },
+    "connection_disconnected" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غير متصل"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disconnected"
+          }
+        }
+      }
+    },
+    "detail_description_title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوصف"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description"
+          }
+        }
+      }
+    },
+    "sort_change" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حسب التغير"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By Change"
+          }
+        }
+      }
+    },
+    "sort_price" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حسب السعر"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By Price"
+          }
+        }
+      }
+    },
+    "sort_title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الفرز"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sort"
+          }
+        }
+      }
+    },
+    "stock_description_aapl" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطور أجهزة المستهلك والبرمجيات والخدمات الرقمية."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Builds consumer devices, software, and digital services."
+          }
+        }
+      }
+    },
+    "stock_description_adbe" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطور برمجيات الإبداع ومنتجات التجربة الرقمية."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creates creative software and digital experience products."
+          }
+        }
+      }
+    },
+    "stock_description_amd" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تصمم المعالجات المركزية والرسومية ومنتجات الحوسبة التكيفية."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Designs CPUs, GPUs, and adaptive computing products."
+          }
+        }
+      }
+    },
+    "stock_description_amzn" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تدير التجارة الإلكترونية والخدمات اللوجستية والسحابة والإعلانات."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runs e-commerce, logistics, cloud, and advertising businesses."
+          }
+        }
+      }
+    },
+    "stock_description_arm" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ترخص معماريات المعالجات للهواتف والأجهزة الطرفية."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Licenses processor architectures for mobile and edge devices."
+          }
+        }
+      }
+    },
+    "stock_description_asml" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تصنع أنظمة الطباعة الضوئية المتقدمة لصناعة الرقائق."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manufactures advanced lithography systems for chipmaking."
+          }
+        }
+      }
+    },
+    "stock_description_avgo" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توفر حلول أشباه الموصلات وبرمجيات البنية التحتية."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supplies semiconductor and infrastructure software solutions."
+          }
+        }
+      }
+    },
+    "stock_description_crm" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطور منصات إدارة علاقات العملاء وأدوات سير العمل."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Builds CRM platforms and customer workflow tools."
+          }
+        }
+      }
+    },
+    "stock_description_goog" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشغل خدمات بحث جوجل والإعلانات والسحابة ومنتجات الذكاء الاصطناعي."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Operates Google search, ads, cloud, and AI products."
+          }
+        }
+      }
+    },
+    "stock_description_ibm" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقدم حلول السحابة الهجينة والاستشارات والذكاء الاصطناعي للمؤسسات."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delivers hybrid cloud, consulting, and enterprise AI solutions."
+          }
+        }
+      }
+    },
+    "stock_description_intc" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنتج منصات أشباه الموصلات للحوسبة والشبكات."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Produces semiconductor platforms for compute and networking."
+          }
+        }
+      }
+    },
+    "stock_description_meta" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطور المنصات الاجتماعية والإعلانات والمنتجات الغامرة."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Develops social platforms, ads, and immersive products."
+          }
+        }
+      }
+    },
+    "stock_description_msft" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توفر برمجيات المؤسسات والمنصات السحابية وأدوات الذكاء الاصطناعي."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Provides enterprise software, cloud platforms, and AI tools."
+          }
+        }
+      }
+    },
+    "stock_description_mu" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنتج منتجات الذاكرة والتخزين لأشباه الموصلات."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Produces memory and storage semiconductor products."
+          }
+        }
+      }
+    },
+    "stock_description_nflx" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تبث المحتوى الترفيهي وتنتج أعمالاً أصلية."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Streams entertainment content and produces original programming."
+          }
+        }
+      }
+    },
+    "stock_description_nvda" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطور منصات الحوسبة المتسارعة ورقائق الذكاء الاصطناعي."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Designs accelerated computing platforms and AI chips."
+          }
+        }
+      }
+    },
+    "stock_description_orcl" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقدم قواعد بيانات المؤسسات وتطبيقات السحابة والبنية التحتية."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delivers enterprise databases, cloud apps, and infrastructure."
+          }
+        }
+      }
+    },
+    "stock_description_pltr" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطور منصات تكامل البيانات وذكاء اتخاذ القرار."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Builds data integration and decision intelligence platforms."
+          }
+        }
+      }
+    },
+    "stock_description_pypl" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تمكن المدفوعات الرقمية للمستهلكين والتجار."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enables digital payments for consumers and merchants."
+          }
+        }
+      }
+    },
+    "stock_description_qcom" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تصمم رقائق الاتصالات اللاسلكية وتقنيات الحوسبة المتصلة."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Designs wireless chips and connected computing technologies."
+          }
+        }
+      }
+    },
+    "stock_description_sap" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توفر تخطيط موارد المؤسسات وبرمجيات الأعمال."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Provides enterprise resource planning and business software."
+          }
+        }
+      }
+    },
+    "stock_description_shop" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توفر برمجيات التجارة للتجار وأدوات المدفوعات."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Provides merchant commerce software and payments tools."
+          }
+        }
+      }
+    },
+    "stock_description_snow" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توفر خدمات التحليلات السحابية ومشاركة البيانات."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offers cloud-native analytics and data sharing services."
+          }
+        }
+      }
+    },
+    "stock_description_tsla" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تصنع السيارات الكهربائية وتخزين الطاقة والبرمجيات."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manufactures electric vehicles, energy storage, and software."
+          }
+        }
+      }
+    },
+    "stock_description_uber" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشغل أسواق مشاركة الرحلات والتوصيل والتنقل."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Operates ride-sharing, delivery, and mobility marketplaces."
+          }
+        }
+      }
+    },
+    "stocks_title" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأسهم"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stocks"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

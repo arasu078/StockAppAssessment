@@ -34,7 +34,6 @@
       }
     },
     "alert_connection_lost_button" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -51,7 +50,6 @@
       }
     },
     "alert_connection_lost_message" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -68,7 +66,6 @@
       }
     },
     "alert_connection_lost_title" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -117,7 +114,6 @@
       }
     },
     "detail_description_title" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
